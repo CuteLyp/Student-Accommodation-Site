@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<style>
+
+#colour {
+background: linear-gradient(270deg, #07b0aa, #379d26, #99bd2a, #9f892f);
+background-size: 800% 800%;
+
+-webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+header {
+	width: 100%;
+	text-align: center;
+	color: #DFDFDF;
+	background: none;
+	padding-top: 65px;
+}
+
+header h1 {
+	font-family: 'Open Sans', Arial, Helvetica Neue, sans-serif;
+	width: 100%;
+	font-size: 25px;
+	text-transform: uppercase;
+	line-height: 0.8;
+	letter-spacing: 3px;
+	font-weight: 300;
+}
+</style>
+
+<html lang="en">
+<header>
+	<i class="fa fa-fire fa-2x"></i>
+	<h1>LoginCheck</h1>
+</header>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<head>
+
+		<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+	</head>
+
+
+<body id="colour">
+
+	<div class="container" style="width:50%; padding-top: 50px">
+		<label>Email address</label>
+			<input id="txtEmail" class="form-control" type="email" placeholder="Example@123.ie"><div class="input-group-append">
+	</div>
+
+	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+	<label>Password</label>
+	<input id="txtPassword" class="form-control" type="password" placeholder="Password"><br>
+
+	<form>
+  		<div class="form-check">
+    		<input type="checkbox" class="form-check-input" id="exampleCheck1">
+    		<label class="form-check-label" for="exampleCheck1">Check me out</label>
+  		</div>
+	</form>
+
+	<button id="btnLogin" class="btn btn-action">Log in</button>
+	<button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+	<button id="btnLogout" class="btn btn-action hide">Log out</button>
+
+	<div class="form-row align-items-center" style="padding: 5px">
+	   	<div class="col-auto" style="padding: 0px">
+      		<input type="text" class="form-control mb-2" id="txtName" placeholder="Jane Doe"">
+		</div>
+
+		<div class="col-auto" style="padding: 0px">
+	   		<div class="input-group mb-2">
+		   		<div class="input-group-prepend">
+		        	<input type="text" class="form-control" id="txtStudentId" placeholder="StudentId">
+		          	<div class="input-group-text">@</div>
+		    	</div>
+		   	</div>
+		</div>
+	</div>
+
+		<script src="authentication.js"></script>
+	</body>
+</html>
+
